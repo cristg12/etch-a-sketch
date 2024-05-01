@@ -17,6 +17,14 @@ function createDiv(n) {
             row.appendChild(newColumn);
         }
     });
+
+    let newColumn = document.querySelectorAll(".child")
+    newColumn.forEach(column => {
+        column.addEventListener("mouseover", (event) => {
+            column.style.backgroundColor = "blue";
+        });
+    });
+    
 }
 
 createDiv(16);
