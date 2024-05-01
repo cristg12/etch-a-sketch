@@ -4,16 +4,19 @@
     for(i=0; i<n; i++){
         let newRow= document.createElement("div")
         let id = i;
-        newRow.setAttribute("id", id)
+        newRow.setAttribute("class", "parent")
         container.appendChild(newRow)
-
         
     }
 
-    for(a=0; a<n; i++){
-        let newColumn = document.createElement("div")
-        newRow.appendChild(newColumn)
-    }
+    let rows = document.querySelectorAll(".parent");
+    rows.forEach(row => {
+        for(let i = 0; i < n; i++) {
+            let newColumn = document.createElement("div");
+            
+            row.appendChild(newColumn);
+        }
+    });
     
 
  }
